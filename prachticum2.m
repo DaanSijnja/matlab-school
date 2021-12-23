@@ -1,9 +1,9 @@
 clear all
-begin = 0;
+begin = -7;
 eind = 7;
 
 w_0 = begin;
-w_eind = eind;
+w_eind = 0;
 
 
 h = 0.01;
@@ -27,10 +27,10 @@ f(n) = f(n)-w_eind/h^2;
 
 w = A \ f;
 w(2:n+1) = w(1:n);
-disp(w)
+
 w(1) = w_0;
 w(n+2) = w_eind;
-disp(w)
+
 plot(x,w)
 
 
